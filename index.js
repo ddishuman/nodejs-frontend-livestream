@@ -14,7 +14,18 @@ app.set("views", "./views"); // default
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(helmet());
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "www.youtube.com"],
+      objectSrc: ["'none'"],
+      frameSrc: ["www.youtube.com"],
+      upgradeInsecureRequests: [],
+    },
+  })
+);
 app.use("/api/courses", courses);
 app.use("/", home);
 

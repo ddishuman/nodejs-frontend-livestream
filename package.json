@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "node _build -b",
+    "start": "npm run build && node dist/index.js",
+    "build": "babel index.js -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
     "config": "^3.3.9",
     "debug": "^4.3.4",
     "express": "^4.18.2",

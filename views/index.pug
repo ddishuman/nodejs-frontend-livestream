@@ -1,18 +1,38 @@
 html
   head
     title= title
+    style.
+      body, html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8 "Lato", sans-serif;
+        color: #777;
+      }
+      .bgimg-1 {
+        position: relative;
+        //- opacity: 0.65;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bgimg-1 {
+        background-image: url(https://tainan-metaverse.s3.ap-northeast-1.amazonaws.com/web/img/main-header-bg.png);
+        height: 15%;
+        width: 100%;
+      }
   body 
     head
-      h1= '台南線上散步導覽'
+      .bgimg-1
     main
-      iframe(type="text/html" width="854" height="480" 
-        src='https://www.youtube.com/embed/live_stream?channel=UCJJmK6bMeDJCS2qiR4U2-wg&autoplay=1'
-      )
+        iframe(type="text/html" width="73%" height="85%" 
+          src='https://www.youtube.com/embed/live_stream?channel=UCJJmK6bMeDJCS2qiR4U2-wg&autoplay=1'
+        )
 
-      iframe(
-        width='700'
-        height='200'
-        src="https://www.youtube.com/live_chat?v=S6U5uwjfwPA&embed_domain=id-local.globomantics.com"
-      )
-    h1= message
+        iframe(
+          width='26.5%'
+          height='85%'
+          src="https://www.youtube.com/live_chat?v=5NNlg3gN7sE&embed_domain=tainanmerse-livestream.ap-northeast-1.elasticbeanstalk.com"
+        )
+
+
 

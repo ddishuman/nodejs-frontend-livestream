@@ -22,6 +22,7 @@ app.use(
       scriptSrc: ["'self'", "www.youtube.com"],
       objectSrc: ["'none'"],
       frameSrc: ["www.youtube.com"],
+      imgSrc: ["tainan-metaverse.s3.ap-northeast-1.amazonaws.com"],
       upgradeInsecureRequests: [],
     },
   })

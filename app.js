@@ -27,7 +27,7 @@ app.use(
     },
   })
 );
-app.use("/api/courses", courses);
+//app.use("/api/courses", courses);
 app.use("/", home);
 
 // Configuration

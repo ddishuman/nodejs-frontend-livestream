@@ -1,5 +1,7 @@
 html
   head
+    meta( charset="UTF-8" )
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title= title
     style.
       body, html {
@@ -10,7 +12,6 @@ html
       }
       .bgimg-1 {
         position: relative;
-        //- opacity: 0.65;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -20,18 +21,33 @@ html
         height: 15%;
         width: 100%;
       }
-  body 
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+      }
+      .video-container iframe, .video-container object, .video-container embed {
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        display: inline
+      }
+  body
     head
       .bgimg-1
     main
-        iframe(type="text/html" width="73%" height="85%" 
-          src='https://www.youtube.com/embed/live_stream?channel=UCJJmK6bMeDJCS2qiR4U2-wg&autoplay=1'
+
+        iframe(type="text/html" width="960" height="600" frameborder="0" allowfullscreen
+          src="https://www.youtube.com/embed/4UOEsOPFYOU?autoplay=1"
         )
 
         iframe(
-          width='26.5%'
-          height='85%'
-          src="https://www.youtube.com/live_chat?v=5NNlg3gN7sE&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
+          width='300px'
+          height='600px'
+          src="https://www.youtube.com/live_chat?v=4UOEsOPFYOU&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
         )
 
 

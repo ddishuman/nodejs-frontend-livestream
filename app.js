@@ -18,7 +18,7 @@ app.use(express.static("public"));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'"],
+      defaultSrc: ["'self'", "www.youtube.com"],
       scriptSrc: ["'self'", "www.youtube.com"],
       objectSrc: ["'none'"],
       frameSrc: ["www.youtube.com"],

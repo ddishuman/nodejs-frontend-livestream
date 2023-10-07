@@ -11,7 +11,7 @@ html
         font: 400 15px/1.8 "Lato", sans-serif;
         color: #777;
       }
-      .bgimg-1 {
+      .bgimg-1, .bgimg-2 {
         position: relative;
         background-position: center;
         background-repeat: no-repeat;
@@ -20,6 +20,11 @@ html
       .bgimg-1 {
         background-image: url(https://tainan-metaverse.s3.ap-northeast-1.amazonaws.com/web/img/main-header-bg.png);
         height: 15%;
+        width: 100%;
+      }
+      .bgimg-2 {
+        background-image: url(https://tainan-metaverse.s3.ap-northeast-1.amazonaws.com/web/img/mobile-header.png);
+        height: 10%;
         width: 100%;
       }
       .video-container {
@@ -49,29 +54,32 @@ html
 
   body
     head
-      .bgimg-1
+      if isMobile
+        .bgimg-2
+      else
+        .bgimg-1
     main
       if isMobile
         .video-container
           iframe(type="text/html" width="960" height="600" frameborder="0" allowfullscreen
-            src="https://www.youtube.com/embed/4UOEsOPFYOU?autoplay=1"
+            src="https://www.youtube.com/embed/SqC3AnZJ6VM?autoplay=1"
           )
 
         iframe(
           width='300'
           height='600'
-          src="https://www.youtube.com/live_chat?v=4UOEsOPFYOU&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
+          src="https://www.youtube.com/live_chat?v=SqC3AnZJ6VM&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
         )
       else 
         div#live.video-container
           iframe(type="text/html" width="960" height="600" frameborder="0" allowfullscreen
-            src="https://www.youtube.com/embed/4UOEsOPFYOU?autoplay=1"
+            src="https://www.youtube.com/embed/SqC3AnZJ6VM?autoplay=1"
           )
         div#live-chat.video-container
           iframe(
             width='250'
             height='600'
-            src="https://www.youtube.com/live_chat?v=4UOEsOPFYOU&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
+            src="https://www.youtube.com/live_chat?v=SqC3AnZJ6VM&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
           )
 
 

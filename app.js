@@ -18,8 +18,8 @@ app.use(express.static("public"));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'", "www.youtube.com"],
-      scriptSrc: ["'self'", "www.youtube.com"],
+      defaultSrc: ["'self'", "www.youtube.com", , "www.facebook.com"],
+      scriptSrc: ["'self'", "www.youtube.com", , "www.facebook.com"],
       objectSrc: ["'none'"],
       frameSrc: ["www.youtube.com", "www.facebook.com"],
       imgSrc: ["tainan-metaverse.s3.ap-northeast-1.amazonaws.com"],

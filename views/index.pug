@@ -72,20 +72,21 @@ html
         )
       else 
         div#live.video-container
-          iframe(type="text/html" width="1280" height="720" style="border:none;overflow:hidden" 
+          iframe(type="text/html" width="1920" height="1080" style="border:none;overflow:hidden" 
                   scrolling="no" 
                   frameborder="0"
                   allowfullscreen="true" 
                   allow="autoplay; clipboard-write; encrypted-media;picture-in-picture;web-share" 
                   allowFullScreen="true"
-              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100074021450702%2Fvideos%2F666325392260815%2F&show_text=true&width=560&t=0"
+              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100074021450702%2Fvideos%2F711986010266397%2F&width=1920&show_text=true&width=560&t=0"
           )
-        //- div#live-chat.video-container
-        //-   iframe(
-        //-     width='250'
-        //-     height='600'
-        //-     src="https://www.youtube.com/live_chat?v=SqC3AnZJ6VM&embed_domain=tainanverse-live.ap-northeast-1.elasticbeanstalk.com"
-        //-   )
+        div#live-chat.video-container
+          iframe(
+            width='250'
+            height='600'
+            target="_top"
+            src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/live/producer/dashboard/711986010266397/COMMENTS&embed_domain=id-local.globomantics.com"
+          )
 
 
 
